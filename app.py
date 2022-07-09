@@ -342,7 +342,7 @@ if st.button('Submit'):
    
     # Get prediction
     prediction = np.exp(rf.predict(df_final))
-    predicition = round(prediction, 0)
+    prediction = round(prediction, 0)
     
     # Output prediction
     st.text(f'This Article will generate {prediction} Visits.')
