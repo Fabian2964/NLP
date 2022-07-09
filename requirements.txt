@@ -4,5 +4,4 @@ joblib
 numpy
 nltk
 gensim
-pickle
 sklearn
