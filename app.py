@@ -250,7 +250,7 @@ if st.button('Submit'):
     	if paid == 'Dynamic':
     		dic_temp['dynamic'] = 1
     		
-    if author != '<select>':
+    if (author != '<select>') & (author != 'Other'):
     	dic_temp[author] = 1  
     
     if author_link == 'yes':
@@ -260,8 +260,10 @@ if st.button('Submit'):
     	dic_temp['source_news_agency'] = 1
     elif source == 'online':
     	dic_temp['source_online'] = 1
-    else:
+    elif source == 'sunday_print':
     	dic_temp['source_sunday_print'] = 1
+    else:
+    	continue
     
     if pub_day == 'Monday':
     	dic_temp['monday'] = 1
