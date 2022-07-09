@@ -263,7 +263,7 @@ if st.button('Submit'):
     elif source == 'sunday_print':
     	dic_temp['source_sunday_print'] = 1
     else:
-    	continue
+    	pass
     
     if pub_day == 'Monday':
     	dic_temp['monday'] = 1
