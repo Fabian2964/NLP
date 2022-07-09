@@ -86,7 +86,7 @@ default_author_link = values_author_link.index('<select>')
 # Dropdown Input
 author_link = st.selectbox('Is a Link to Authors personal site included?', values_author_link, index=default_author_link)
 
-values_source = ['<select>','news_agency', 'online', 'sunday_print']
+values_source = ['<select>','news_agency', 'online', 'sunday_print', 'weekday_print or other']
 default_source = values_source.index('<select>')
 
 # Dropdown Input
