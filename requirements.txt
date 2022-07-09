@@ -4,7 +4,5 @@ joblib
 numpy
 nltk
 gensim
-string
 pickle
 sklearn
-builtins
