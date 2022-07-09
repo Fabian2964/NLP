@@ -4,7 +4,6 @@ joblib
 numpy
 nltk
 gensim
-types
 re
 string
 pickle
