@@ -3,6 +3,7 @@ pandas
 joblib
 numpy
 nltk
+gensim
 gensim.corpora
 gensim.models
 gensim.similarities
