@@ -344,7 +344,7 @@ if st.button('Submit'):
     prediction = np.exp(rf.predict(df_final))
     
     # Output prediction
-    st.text(f'This Article will generate {prediction:.0} Visits.')
+    st.text(f'This Article will generate {prediction:.0f} Visits.')
 
 
 # In[ ]:
