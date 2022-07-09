@@ -2,11 +2,8 @@ pandas
 joblib
 numpy
 nltk
-nltk.stem.snowball
-nltk.tokenize
-nltk.corpus
 gensim
 re
 string
 pickle
-sklearn.feature_extraction.text
+sklearn.feature_extraction
