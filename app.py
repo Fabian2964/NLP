@@ -342,9 +342,11 @@ if st.button('Submit'):
    
     # Get prediction
     prediction = np.exp(rf.predict(df_final))
+    prediction = np.round(prediction, 0)
     
     # Output prediction
-    st.text(f'This Article will generate {prediction:.0f} Visits.')
+    st.text(f'The Number of Visits of this Article will be:')
+    st.metric("Visits", int(prediction))
 
 
 # In[ ]:
