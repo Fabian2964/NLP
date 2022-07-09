@@ -346,7 +346,7 @@ if st.button('Submit'):
     
     # Output prediction
     st.text(f'The Number of Visits of this Article will be:')
-    st.metric("Visits", int(prediction))
+    st.metric("", int(prediction))
 
 
 # In[ ]:
