@@ -1,9 +1,15 @@
+streamlit
 pandas
 joblib
 numpy
 nltk
-gensim
+gensim.corpora
+gensim.models
+gensim.similarities
+gensim.matutils
+types
 re
 string
 pickle
-sklearn.feature_extraction
+sklearn
+builtins
