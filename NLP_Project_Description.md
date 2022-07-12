@@ -8,3 +8,32 @@ The project topic constitutes a central question of current (data-driven) journa
 
 ![image](https://user-images.githubusercontent.com/98846184/178575216-6ab54dda-e6fe-4747-bd45-39a4b17e6942.png)
 
+## Data
+The original dataset contains 26,538 articles with 106 features for each, 77 of which are categorical. A few feature highlights include “topics probabilities” derived from LDA, “free/paid”, “author”, “source weekday print”, “publishing-time of day”, “day of week” and “previous day visits”. Approx. 75% of these features were created from specifications of more narrow categories (such as “author”). The feature set was refined by removing collinear and insignificant features with the final dataset consisting of 85 variables feeding the baseline model. 
+
+## Algorithms
+### Feature Engineering
+    1. Create one-hot features for 15 authors with most and least visits and orders per article
+    2. Preprocess article texts (punctuation, lowering, stemming, stopwords), vectorize via TFIDF, fit an LDA model and choose number of topics 
+    3. Creating bins reflecting time series features (such as time of day or day of week)
+    4. Creating bins reflecting article source (such as print weekday or news agency)
+    5. Converting categorical features to binary dummy variables (such as authors or department)
+    6. Log-transform count-data such as article visits to fulfill regression requirements of normal distribution of errors
+    
+### Models
+Linear regression, lasso, ridge, random forest regressor and gradient boosting regressor were used before settling on gradient boosting regressor as the model with strongest performance. Throughout, collinear and insignificant features were removed from the feature space.
+
+### Model Evaluation and Selection
+The entire training dataset was split by publication date into individual months to conduct forward time series cross validation on individual months. As a result, all scores reported below were calculated with 4-fold cross validation. Predictions on articles with publication date in June were limited to the very end, so this split was only used and scores seen just once. Models were evaluated based on their generalization performance using R², Mean Absolute Error (MAE) and Root Mean Square Error (RMSE). The gradient boosting regressor had a R² of 0.61 on the test sample versus a mean R² of 0.60 on the 4-fold CV sample.
+
+## Tools
+    • BeautifulSoup and Selenium for webscraping
+    • NumPy and pandas for data manipulation
+    • NLTK and genism for text processing and topic modeling
+    • Pillow for image feature generation
+    • Statsmodels and scikit-learn for modeling
+    • Matplotlib and Seaborn for plotting
+    • Streamlit for creating a web application
+
+## Web App
+In addition to the slides and visuals presented, the model is embedded in a dedicated streamlit app: https://fabian2964-nlp-app-shxtrh.streamlitapp.com/
