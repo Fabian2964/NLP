@@ -43,10 +43,12 @@ Linear regression, lasso, ridge, random forest regressor and gradient boosting r
 ### Model Evaluation and Selection
 The entire training dataset was split by publication date into individual months to conduct forward time series cross validation on individual months. As a result, all scores reported below were calculated with 4-fold cross validation. Predictions on articles with publication date in June were limited to the very end, so this split was only used and scores seen just once. Models were evaluated based on their generalization performance using R², Mean Absolute Error (MAE) and Root Mean Square Error (RMSE). The gradient boosting regressor had a R² of 0.61 on the test sample versus a mean R² of 0.60 on the 4-fold CV sample.
 
-**Performance of different Models
+**Performance of different Models**
+
 ![image](https://user-images.githubusercontent.com/98846184/178576711-99314d78-8d84-44ba-9f1f-5d42a6a929e6.png)
 
-**Gradient Boosting Regressor - Prediction vs. Test Values (Log-Transformed)
+**Gradient Boosting Regressor - Prediction vs. Test Values (Log-Transformed)**
+
 ![image](https://user-images.githubusercontent.com/98846184/178576670-91831017-8a3c-4ddc-b460-54b683f6788b.png)
 
 ## Tools
