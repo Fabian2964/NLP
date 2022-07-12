@@ -29,10 +29,10 @@ The original dataset contains 26,538 articles with 106 features for each, 77 of 
 **Distribution of Visits vs. Log-Transformed Visits
 ![image](https://user-images.githubusercontent.com/98846184/178576415-530da3cd-50a7-4cdc-b90e-89b164795ded.png)
 
-**Residual-Plot after Log-Transformation
+**Residual-Plot after Log-Transformation**
 ![image](https://user-images.githubusercontent.com/98846184/178576476-68e42f12-e77b-467b-8102-418be31d1ee8.png)
 
-**QQ-Plot
+**QQ-Plot**
 ![image](https://user-images.githubusercontent.com/98846184/178576763-f5bdd4cd-1beb-4b68-beeb-e88a85dea751.png)
 
 ### Models
