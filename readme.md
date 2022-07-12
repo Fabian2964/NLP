@@ -1,4 +1,4 @@
-# NLP Project Description - Predicting Visits from topics of Digital Newspaper Articles
+# NLP Project - Predicting Visits from topics of Digital Newspaper Articles
 
 ## Abstract
 The goal of this project was to combine topic modeling and regression approaches to forecast visits for newspaper articles published online to support editors in choosing which articles to publish. Additionally, the model may provide evidence for journalists which article topics and characteristics may be important for attracting readership. My analysis was based on articles of German publisher Frankfurter Allgemeine Zeitung published online 01/01/22 - 20/06/22 and their corresponding visit figures. In feature engineering, I leveraged article text data and meta information of articles itself to create a set of categorical and numerical features. In terms of topic modeling, I used LDA to feed linear regression, lasso, ridge, random forest regressor and gradient boosting regressor. Finally, model was integrated within a web app on streamlit enabling to pass article characteristics to generate visit predictions.
