@@ -11,11 +11,8 @@ The project topic constitutes a central question of current (data-driven) journa
 ## Data
 The original dataset contains 26,538 articles with 106 features for each, 77 of which are categorical. A few feature highlights include “topics probabilities” derived from LDA, “free/paid”, “author”, “source weekday print”, “publishing-time of day”, “day of week” and “previous day visits”. Approx. 75% of these features were created from specifications of more narrow categories (such as “author”). The feature set was refined by removing collinear and insignificant features with the final dataset consisting of 85 variables feeding the baseline model.
 
-Topic Development at faz.net in H1/2022
+**Topic Development at faz.net in H1/2022
 ![image](https://user-images.githubusercontent.com/98846184/178576201-571344c8-40f3-40f9-8b84-3868be70dcab.png)
-
-Correlation Matrix
-![image](https://user-images.githubusercontent.com/98846184/178576568-c21fa656-2dd5-4ec7-9fcb-a381d4e4d118.png)
 
 ## Algorithms
 ### Feature Engineering
@@ -26,13 +23,16 @@ Correlation Matrix
     5. Converting categorical features to binary dummy variables (such as authors or department)
     6. Log-transform count-data such as article visits to fulfill regression requirements of normal distribution of errors
 
-Distribution of Visits vs. Log-Transformed Visits
+**Correlation Matrix
+![image](https://user-images.githubusercontent.com/98846184/178576568-c21fa656-2dd5-4ec7-9fcb-a381d4e4d118.png)
+
+**Distribution of Visits vs. Log-Transformed Visits
 ![image](https://user-images.githubusercontent.com/98846184/178576415-530da3cd-50a7-4cdc-b90e-89b164795ded.png)
 
-Residual-Plot after Log-Transformation
+**Residual-Plot after Log-Transformation
 ![image](https://user-images.githubusercontent.com/98846184/178576476-68e42f12-e77b-467b-8102-418be31d1ee8.png)
 
-QQ-Plot
+**QQ-Plot
 ![image](https://user-images.githubusercontent.com/98846184/178576763-f5bdd4cd-1beb-4b68-beeb-e88a85dea751.png)
 
 ### Models
@@ -41,10 +41,10 @@ Linear regression, lasso, ridge, random forest regressor and gradient boosting r
 ### Model Evaluation and Selection
 The entire training dataset was split by publication date into individual months to conduct forward time series cross validation on individual months. As a result, all scores reported below were calculated with 4-fold cross validation. Predictions on articles with publication date in June were limited to the very end, so this split was only used and scores seen just once. Models were evaluated based on their generalization performance using R², Mean Absolute Error (MAE) and Root Mean Square Error (RMSE). The gradient boosting regressor had a R² of 0.61 on the test sample versus a mean R² of 0.60 on the 4-fold CV sample.
 
-Performance of different Models
+**Performance of different Models
 ![image](https://user-images.githubusercontent.com/98846184/178576711-99314d78-8d84-44ba-9f1f-5d42a6a929e6.png)
 
-Gradient Boosting Regressor - Prediction vs. Test Values (Log-Transformed)
+**Gradient Boosting Regressor - Prediction vs. Test Values (Log-Transformed)
 ![image](https://user-images.githubusercontent.com/98846184/178576670-91831017-8a3c-4ddc-b460-54b683f6788b.png)
 
 ## Tools
