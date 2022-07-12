@@ -11,7 +11,7 @@ The project topic constitutes a central question of current (data-driven) journa
 ## Data
 The original dataset contains 26,538 articles with 106 features for each, 77 of which are categorical. A few feature highlights include “topics probabilities” derived from LDA, “free/paid”, “author”, “source weekday print”, “publishing-time of day”, “day of week” and “previous day visits”. Approx. 75% of these features were created from specifications of more narrow categories (such as “author”). The feature set was refined by removing collinear and insignificant features with the final dataset consisting of 85 variables feeding the baseline model.
 
-**Topic Development at faz.net in H1/2022
+**Topic Development at faz.net in H1/2022**
 ![image](https://user-images.githubusercontent.com/98846184/178576201-571344c8-40f3-40f9-8b84-3868be70dcab.png)
 
 ## Algorithms
@@ -23,16 +23,17 @@ The original dataset contains 26,538 articles with 106 features for each, 77 of 
     5. Converting categorical features to binary dummy variables (such as authors or department)
     6. Log-transform count-data such as article visits to fulfill regression requirements of normal distribution of errors
 
-**Correlation Matrix
+**Correlation Matrix**
 ![image](https://user-images.githubusercontent.com/98846184/178576568-c21fa656-2dd5-4ec7-9fcb-a381d4e4d118.png)
 
-**Distribution of Visits vs. Log-Transformed Visits
+**Distribution of Visits vs. Log-Transformed Visits**
 ![image](https://user-images.githubusercontent.com/98846184/178576415-530da3cd-50a7-4cdc-b90e-89b164795ded.png)
 
 **Residual-Plot after Log-Transformation**
 ![image](https://user-images.githubusercontent.com/98846184/178576476-68e42f12-e77b-467b-8102-418be31d1ee8.png)
 
 **QQ-Plot**
+
 ![image](https://user-images.githubusercontent.com/98846184/178576763-f5bdd4cd-1beb-4b68-beeb-e88a85dea751.png)
 
 ### Models
